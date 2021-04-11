@@ -1,0 +1,127 @@
+package Week01
+Java中的PriorityQueue是用二叉堆实现的。storage数组存储元素，comparator定义比较函数，used记录数组已用大小。每一个PriorityQueue的节点值满足小于等于两个孩子节点（2*n+1,2*n+2）的值。【小于等于只是comparator得到的比较结果，也可以调整为大于等于】
+
+{/** Number of elements actually used in the storage array.  */
+  55:   int used; //数组中有多少已经用过，用于判断目前数组size是否可以继续容纳节点，如果add时发现used==storage.length,则扩容
+  56:
+  57:   /**
+  58:    * This is the storage for the underlying binomial heap.
+  59:    * The idea is, each node is less than or equal to its children.
+  60:    * A node at index N (0-based) has two direct children, at
+  61:    * nodes 2N+1 and 2N+2.
+  62:    */
+  63:   E[] storage; // 存储元素的数组
+  64:
+  65:   /**
+  66:    * The comparator we're using, or null for natural ordering.
+  67:    */
+  68:   Comparator<? super E> comparator; // 比较函数
+
+PriorityQueue的关键函数，向上调整堆，在add元素时应用。由于add是在数组的尾部，即完全二叉树的叶子节点那一层增加元素，所以堆结构需要向上调整。
+
+向上调整堆，比较parent->(index-1)/2元素和index元素的大小，如果比index大，parent和index元素互换，继续向上调整，否则说明index已经在应该在的位置，break。
+ 301:   void bubbleUp(int index)
+ 302:   {
+ 303:     // The element at INDEX was inserted into a blank spot.  Now move
+ 304:     // it up the tree to its natural resting place.
+ 305:     while (index > 0)
+ 306:       {
+ 307:     // This works regardless of whether we're at 2N+1 or 2N+2.
+ 308:     int parent = (index - 1) / 2;
+ 309:     if (Collections.compare(storage[parent], storage[index], comparator)
+ 310:         <= 0)
+ 311:       {
+ 312:         // Parent is the same or smaller than this element, so the
+ 313:         // invariant is preserved.  Note that if the new element
+ 314:         // is smaller than the parent, then it is necessarily
+ 315:         // smaller than the parent's other child.
+ 316:         break;
+ 317:       }
+ 318:
+ 319:     E temp = storage[index];
+ 320:     storage[index] = storage[parent];
+ 321:     storage[parent] = temp;
+ 322:
+ 323:     index = parent;
+ 324:       }
+ 325:   }
+PriorityQueue的关键函数，向下调整堆，在delete时应用。delete可能会delete数组中的任何元素。
+向下调整堆，比较index元素的两个孩子节点2*n+1,2*n+2的值，较小的一个赋值给index，继续向下调整，直到index节点值为空。【注意：这种实现方式是会产生叶子节点空洞的，也就是说PriorityQueue不是每时每刻都是一个完全二叉树，但是这样也不会造成浪费。因为每次add节点时，会先查找storage中的null节点进行插入。此处也可以选择index跟最后一个节点互换，然后开始向下推倒，这样不会产生空洞。】
+void remove(int index)
+ 269:   {
+ 270:     // Remove the element at INDEX.  We do this by finding the least
+ 271:     // child and moving it into place, then iterating until we reach
+ 272:     // the bottom of the tree.
+ 273:     while (storage[index] != null)
+ 274:       {
+ 275:     int child = 2 * index + 1;
+ 276:
+ 277:     // See if we went off the end.
+ 278:     if (child >= storage.length)
+ 279:       {
+ 280:         storage[index] = null;
+ 281:         break;
+ 282:       }
+ 283:
+ 284:     // Find which child we want to promote.  If one is not null,
+ 285:     // we pick it.  If both are null, it doesn't matter, we're
+ 286:     // about to leave.  If neither is null, pick the lesser.
+ 287:     if (child + 1 >= storage.length || storage[child + 1] == null)
+ 288:       {
+ 289:         // Nothing.
+ 290:       }
+ 291:     else if (storage[child] == null
+ 292:          || (Collections.compare(storage[child], storage[child + 1],
+ 293:                      comparator) > 0))
+ 294:       ++child;
+ 295:     storage[index] = storage[child];
+ 296:     index = child;
+ 297:       }
+ 298:     --used;
+ 299:   }
+ 300:
+PriorityQueue暴露的接口以及实现
+// 插入一个元素，先找到第一个null值slot，插入并向下调整堆
+public boolean offer(E o)
+ 178:   {
+ 179:     if (o == null)
+ 180:       throw new NullPointerException();
+ 181:
+ 182:     int slot = findSlot(-1);
+ 183:
+ 184:     storage[slot] = o;
+ 185:     ++used;
+ 186:     bubbleUp(slot);
+ 187:
+ 188:     return true;
+ 189:   }
+ 190:// 直接取第一个元素，代表堆顶
+ 191:   public E peek()
+ 192:   {
+ 193:     return used == 0 ? null : storage[0];
+ 194:   }
+ 195:// 取第一个元素，并向下调整堆
+ 196:   public E poll()
+ 197:   {
+ 198:     if (used == 0)
+ 199:       return null;
+ 200:     E result = storage[0];
+ 201:     remove(0);
+ 202:     return result;
+ 203:   }
+ 204:// 遍历storage并找到相应的元素，并向下调整堆
+ 205:   public boolean remove(Object o)
+ 206:   {
+ 207:     if (o != null)
+ 208:       {
+ 209:     for (int i = 0; i < storage.length; ++i)
+ 210:       {
+ 211:         if (o.equals(storage[i]))
+ 212:           {
+ 213:         remove(i);
+ 214:         return true;
+ 215:           }
+ 216:       }
+ 217:       }
+ 218:     return false;
+ 219:   }
