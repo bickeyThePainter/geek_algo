@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02143bd-e4dd-4117-b4a9-ded33d257a76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Week02/leetcode_nary-level-traverse.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week02/leetcode_ugly-number.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week01/[改写deque代码]deque-java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week01/[源码分析]Queue-java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Go Test.TestRotate in leetcode_design-circular-deque-array_test.go">
     <configuration name="TestRotate in [leetcode]design-circular-deque-array_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -138,10 +139,14 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="574" y="380" key="RollbackChangesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1618153816198" />
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1618153225396">
+    <state x="891" y="353" key="SettingsEditor" timestamp="1618411243044">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1618153225396" />
+    <state x="891" y="353" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1618411243044" />
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1618302782820">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1618302782820" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
