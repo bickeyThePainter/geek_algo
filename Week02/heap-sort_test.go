@@ -21,9 +21,21 @@ func (h *Heap) down(i int) {
 		maxChild := h.maxChild(i)
 		if h.data[maxChild] > h.data[i] {
 			h.data[maxChild], h.data[i] = h.data[i], h.data[maxChild]
+			// recursion is an option as well
 			i = maxChild
 		} else {
 			break
+		}
+	}
+}
+
+func (h *Heap) downRecursion(i int) {
+	if h.firstBorn(i) < h.offset {
+		maxChild := h.maxChild(i)
+		if h.data[maxChild] > h.data[i] {
+			h.data[maxChild], h.data[i] = h.data[i], h.data[maxChild]
+			// recursion is an option as well
+			h.down(maxChild)
 		}
 	}
 }
