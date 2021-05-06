@@ -30,3 +30,4 @@ func jump2(nums []int) int {
 	return jumps
 
 }
+
