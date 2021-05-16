@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c02143bd-e4dd-4117-b4a9-ded33d257a76" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Week06-07/leetcode_generate_parentheses.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week06-07/leetcode_word_ladder.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,10 +176,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="891" y="353" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1618411243044" />
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1621148270125">
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1621173632068">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1621148270125" />
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1621173632068" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
