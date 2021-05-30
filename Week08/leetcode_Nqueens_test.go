@@ -5,11 +5,11 @@ package Week08
 func solveNQueens(n int) [][]string {
 	res := make([][]string, 0)
 	prev := make([]int, 0)
-	dfs(0, n, 0, 0, 0, &prev, &res)
+	dfs1(0, n, 0, 0, 0, &prev, &res)
 	return res
 }
 
-func dfs(index, n, cols, adds, minus int, prev *[]int, res *[][]string) {
+func dfs1(index, n, cols, adds, minus int, prev *[]int, res *[][]string) {
 	if index == n {
 		curRes := make([]string, n, n)
 		for i := 0; i < n; i++ {
@@ -31,7 +31,7 @@ func dfs(index, n, cols, adds, minus int, prev *[]int, res *[][]string) {
 		cur := candidates & (-candidates)
 		candidates = (candidates - 1) & candidates
 		*prev = append(*prev, cur)
-		dfs(index+1, n, cols|cur, (adds|cur)>>1, (minus|cur)<<1, prev, res)
+		dfs1(index+1, n, cols|cur, (adds|cur)>>1, (minus|cur)<<1, prev, res)
 		*prev = (*prev)[0 : len(*prev)-1]
 	}
 }
