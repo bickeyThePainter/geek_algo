@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c02143bd-e4dd-4117-b4a9-ded33d257a76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Week10/leetcode_findallanarams.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week10/leetcode_reverse_only_letters.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Week10/leetcode_wildcardmatching.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +55,45 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Go Test.TestSplitArray in leetcode_Nqueens_test.go">
-    <configuration name="TestShortestPath in leetcode_shortest_path_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="geekbang_algo" />
-      <working_directory value="$PROJECT_DIR$/Week06" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Week06/leetcode_shortest_path_test.go" />
-      <pattern value="^\QTestShortestPath\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSolve in leetcode_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestAtoa in leetcode_Nqueens_test.go">
+    <configuration name="TestAtoa in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="geekbang_algo" />
       <working_directory value="$PROJECT_DIR$/Week08" />
       <framework value="gotest" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Week08/leetcode_test.go" />
-      <pattern value="^\QTestSolve\E$" />
+      <filePath value="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" />
+      <pattern value="^\QTestAtoa\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLeast in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="geekbang_algo" />
+      <working_directory value="$PROJECT_DIR$/Week08" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" />
+      <pattern value="^\QTestLeast\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMinStack in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="geekbang_algo" />
+      <working_directory value="$PROJECT_DIR$/Week08" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" />
+      <pattern value="^\QTestMinStack\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMy in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="geekbang_algo" />
+      <working_directory value="$PROJECT_DIR$/Week08" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" />
+      <pattern value="^\QTestMy\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestSplitArray in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -84,33 +106,13 @@
       <pattern value="^\QTestSplitArray\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSplite in leetcode_Nqueens_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="geekbang_algo" />
-      <working_directory value="$PROJECT_DIR$/Week08" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go" />
-      <pattern value="^\QTestSplite\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestWords in leetcode_word_ladder_ii_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="geekbang_algo" />
-      <working_directory value="$PROJECT_DIR$/Week04" />
-      <framework value="gotest" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Week04/leetcode_word_ladder_ii_test.go" />
-      <pattern value="^\QTestWords\E$" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestAtoa in leetcode_Nqueens_test.go" />
+        <item itemvalue="Go Test.TestMy in leetcode_Nqueens_test.go" />
+        <item itemvalue="Go Test.TestLeast in leetcode_Nqueens_test.go" />
+        <item itemvalue="Go Test.TestMinStack in leetcode_Nqueens_test.go" />
         <item itemvalue="Go Test.TestSplitArray in leetcode_Nqueens_test.go" />
-        <item itemvalue="Go Test.TestSplite in leetcode_Nqueens_test.go" />
-        <item itemvalue="Go Test.TestSolve in leetcode_test.go" />
-        <item itemvalue="Go Test.TestShortestPath in leetcode_shortest_path_test.go" />
-        <item itemvalue="Go Test.TestWords in leetcode_word_ladder_ii_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -135,50 +137,50 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="713" y="474" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1618153355267" />
-    <state width="2215" height="470" key="GridCell.Tab.0.bottom" timestamp="1621695405817">
+    <state width="2215" height="470" key="GridCell.Tab.0.bottom" timestamp="1622904070082">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1621695405817" />
-    <state width="2215" height="470" key="GridCell.Tab.0.center" timestamp="1621695405816">
+    <state width="2215" height="470" key="GridCell.Tab.0.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070082" />
+    <state width="2215" height="470" key="GridCell.Tab.0.center" timestamp="1622904070081">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1621695405816" />
-    <state width="2215" height="470" key="GridCell.Tab.0.left" timestamp="1621695405816">
+    <state width="2215" height="470" key="GridCell.Tab.0.center/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070081" />
+    <state width="2215" height="470" key="GridCell.Tab.0.left" timestamp="1622904070081">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1621695405816" />
-    <state width="2215" height="470" key="GridCell.Tab.0.right" timestamp="1621695405817">
+    <state width="2215" height="470" key="GridCell.Tab.0.left/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070081" />
+    <state width="2215" height="470" key="GridCell.Tab.0.right" timestamp="1622904070081">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1621695405817" />
-    <state width="2215" height="470" key="GridCell.Tab.1.bottom" timestamp="1621695406778">
+    <state width="2215" height="470" key="GridCell.Tab.0.right/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070081" />
+    <state width="2215" height="470" key="GridCell.Tab.1.bottom" timestamp="1622904070999">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1621695406778" />
-    <state width="2215" height="470" key="GridCell.Tab.1.center" timestamp="1621695406778">
+    <state width="2215" height="470" key="GridCell.Tab.1.bottom/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070999" />
+    <state width="2215" height="470" key="GridCell.Tab.1.center" timestamp="1622904070999">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.1.center/0.23.2560.1417@0.23.2560.1417" timestamp="1621695406778" />
-    <state width="2215" height="470" key="GridCell.Tab.1.left" timestamp="1621695406778">
+    <state width="2215" height="470" key="GridCell.Tab.1.center/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070999" />
+    <state width="2215" height="470" key="GridCell.Tab.1.left" timestamp="1622904070999">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.1.left/0.23.2560.1417@0.23.2560.1417" timestamp="1621695406778" />
-    <state width="2215" height="470" key="GridCell.Tab.1.right" timestamp="1621695406778">
+    <state width="2215" height="470" key="GridCell.Tab.1.left/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070999" />
+    <state width="2215" height="470" key="GridCell.Tab.1.right" timestamp="1622904070999">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2215" height="470" key="GridCell.Tab.1.right/0.23.2560.1417@0.23.2560.1417" timestamp="1621695406778" />
-    <state x="574" y="380" key="RollbackChangesDialog" timestamp="1621692387600">
+    <state width="2215" height="470" key="GridCell.Tab.1.right/0.23.2560.1417@0.23.2560.1417" timestamp="1622904070999" />
+    <state x="574" y="380" key="RollbackChangesDialog" timestamp="1623941030897">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="574" y="380" key="RollbackChangesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1621692387600" />
+    <state x="574" y="380" key="RollbackChangesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1623941030897" />
     <state x="891" y="353" key="SettingsEditor" timestamp="1618411243044">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="891" y="353" key="SettingsEditor/0.23.2560.1417@0.23.2560.1417" timestamp="1618411243044" />
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1621586854109">
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup" timestamp="1623941190148">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1621586854109" />
+    <state x="945" y="452" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1623941190148" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -203,10 +205,16 @@
           <line>91</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Week08/leetcode_Nqueens_test.go</url>
+          <line>45</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/geekbang_algo$TestMy_in_leetcode_Nqueens_test_go.out" NAME="TestMy in leetcode_Nqueens_test.go Coverage Results" MODIFIED="1622385591913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/geekbang_algo$TestWords_in_leetcode_word_ladder_ii_test_go.out" NAME="TestWords in leetcode_word_ladder_ii_test.go Coverage Results" MODIFIED="1620568195288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
