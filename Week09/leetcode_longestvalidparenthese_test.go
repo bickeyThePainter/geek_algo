@@ -1,6 +1,7 @@
 package Week09
 
 import (
+	"container/heap"
 	"container/list"
 	"testing"
 )
@@ -59,48 +60,159 @@ func longestValidParentheses2(s string) int {
 	}
 	return maxLength
 }
+
 // 左右两次循环 -> 实质上是贪心 假如左->右 right>left 说明找到了分割点 同样的 假如右->左 left>right 说明找到了分割点
 func longestValidParentheses3(s string) int {
-	left,right:=0,0
-	maxLength:=0
-	max:=func(x,y int) int{
-		if x>=y{
+	left, right := 0, 0
+	maxLength := 0
+	max := func(x, y int) int {
+		if x >= y {
 			return x
 		}
 		return y
 	}
-	for _,c:=range s{
-		if c=='('{
+	for _, c := range s {
+		if c == '(' {
 			left++
-		}else{
+		} else {
 			right++
 		}
-		if left==right{
-			maxLength=max(maxLength,left*2)
+		if left == right {
+			maxLength = max(maxLength, left*2)
 		}
-		if left<right{
-			left,right=0,0
+		if left < right {
+			left, right = 0, 0
 		}
 	}
-	left,right=0,0
-	for i:=len(s)-1;i>=0;i--{
-		if s[i]==')'{
+	left, right = 0, 0
+	for i := len(s) - 1; i >= 0; i-- {
+		if s[i] == ')' {
 			right++
-		}else{
+		} else {
 			left++
 		}
-		if left==right{
-			maxLength=max(maxLength,left*2)
+		if left == right {
+			maxLength = max(maxLength, left*2)
 		}
-		if left>right{
-			left,right=0,0
+		if left > right {
+			left, right = 0, 0
 		}
 	}
 	return maxLength
 
 }
 
+
+func kmp(a,b string) int{
+	if a=="" || b==""{
+		return -1
+	}
+	if len(a)<len(b){
+		return -1
+	}
+	// 计算模式串递归
+	var calc func(a string ,pIndex,index int,prefix []int) int
+	calc=func(a string,pIndex,index int,prefix []int)int{
+		if pIndex==0 && a[pIndex]!=a[index]{
+			return 0
+		}
+		if pIndex==0 && a[pIndex]==a[index]{
+			return 1
+		}
+		if a[pIndex]!=a[index]{
+			return calc(a,prefix[pIndex-1],index,prefix)
+		}
+		return pIndex+1
+	}
+	n,m:=len(a),len(b)
+	prefix:=make([]int,m)
+	prefix[0]=0
+	// 计算模式串的prefix
+	for i:=1;i<m;i++{
+		prefix[i]=calc(b,prefix[i-1],i,prefix)
+	}
+	i,j:=0,0
+	for i<n && j<m{
+		if a[i]==b[j]{
+			i++
+			j++
+		}else{
+			if j==0{
+				i++
+			}else{
+				// 寻找模式串前缀，利用已有成果再匹配 避免重复
+				j=prefix[j-1]
+			}
+		}
+	}
+	if j==m{
+		return i-m
+	}
+	return -1
+
+
+
+}
+
+func findTopKQuery(orders [][]int, k int)  []int {
+	durations:=make(map[int]int)
+	res:=make([]int,0)
+	q:=make(PriorityQueue,0)
+	for _,o:=range orders{
+		heap.Push(&q,&Item{o[0],o[1]+o[2]})
+		durations[o[0]]=o[2]
+	}
+	for len(res)<k && q.Len()>0{
+		cur:=heap.Pop(&q).(*Item)
+		res=append(res,cur.queryId)
+		heap.Push(&q,&Item{cur.queryId,cur.endTime+durations[cur.queryId]})
+		for q.Len()>0 && q[len(q)-1].endTime==cur.endTime{
+			_cur:=heap.Pop(&q).(*Item)
+			res=append(res,_cur.queryId)
+			heap.Push(&q,&Item{
+				_cur.queryId,
+				_cur.endTime+durations[cur.queryId],
+			})
+		}
+	}
+	return res
+}
+
+// heap
+type Item struct{
+	queryId,endTime int
+}
+
+type  PriorityQueue []*Item
+
+func (q PriorityQueue) Less(i,j int) bool{
+	return q[i].endTime<q[j].endTime
+}
+
+func (q PriorityQueue) Swap(i,j int){
+	q[i],q[j]=q[j],q[i]
+}
+
+func (q PriorityQueue) Len() int{
+	return len(q)
+}
+
+func (q *PriorityQueue) Pop() interface{}{
+	last:=(*q)[len(*q)-1]
+	*q=(*q)[0:len(*q)-1]
+	return last
+}
+
+func (q *PriorityQueue) Push(i interface{}){
+	*q=append(*q,i.(*Item))
+}
+
+
+
 func TestLong(t *testing.T) {
-	longestValidParentheses(
-		")()())")
+	//longestValidParentheses(
+		//")()())")
+	//kmp("BBC ABCDAB ABCDABCDABDE","ABCDABD")
+	//computeTernary("N?1:Y?4:5")
+
 }
