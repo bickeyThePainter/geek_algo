@@ -59,6 +59,46 @@ func longestValidParentheses2(s string) int {
 	}
 	return maxLength
 }
+// 左右两次循环 -> 实质上是贪心 假如左->右 right>left 说明找到了分割点 同样的 假如右->左 left>right 说明找到了分割点
+func longestValidParentheses3(s string) int {
+	left,right:=0,0
+	maxLength:=0
+	max:=func(x,y int) int{
+		if x>=y{
+			return x
+		}
+		return y
+	}
+	for _,c:=range s{
+		if c=='('{
+			left++
+		}else{
+			right++
+		}
+		if left==right{
+			maxLength=max(maxLength,left*2)
+		}
+		if left<right{
+			left,right=0,0
+		}
+	}
+	left,right=0,0
+	for i:=len(s)-1;i>=0;i--{
+		if s[i]==')'{
+			right++
+		}else{
+			left++
+		}
+		if left==right{
+			maxLength=max(maxLength,left*2)
+		}
+		if left>right{
+			left,right=0,0
+		}
+	}
+	return maxLength
+
+}
 
 func TestLong(t *testing.T) {
 	longestValidParentheses(
